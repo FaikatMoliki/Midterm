@@ -1,0 +1,39 @@
+<html>
+<style>
+#ballerina { /* #1. correct the code for ID */
+
+width: 118px;
+height: 130px;
+margin: auto;
+background:url("https://previews.123rf.com/images/kathygold/kathygold1009/kathygold100900068/7730727-african-american-ballerina-silhouette-on-a-white-background.jpg"); 
+/* #2. correct the code to make the image shown */
+
+background-size: contain; 
+/* #3. correct the code to show the ballerina fit into the given width and height */
+
+transform-origin: 60% 0%; 
+animation: 
+        turn 2s ease-in, /* #4. Let the ballerina turn once duration two seconds by getting faster */
+       
+        turn 0.5s ease-in-out 2s 10, /* #5. After the first turn, let the ballerina turn 10 times duration 0.5 seconds without any acceleration */
+        
+        turn 2s ease-out 1,/* #6. After then, let the ballerina turn once more slowly duration two seconds by getting slower */
+        
+        fade_out_in 1s 7s 1 ; /* #7. after all the turn done, show the ballerina in fade out and fade in */
+}
+
+@keyframes turn {
+    from{transform: rotateY(0);}
+    to{transform: rotateY(360deg) ;} / #8. make the ballerina turn one round
+}
+@keyframes fade_out_in {
+        from{opacity:0;}
+        to{opacity: 1;}
+    }
+
+</style>
+<body>
+    <div id="ballerina"></div>
+</body>
+</html>
+
